@@ -1,0 +1,37 @@
+s1.equals(s2) trả về true or false //so sánh hai chuỗi kể cả chữ hoa và chữ thường
+s1.equalsIgnoreCase(s2)  trả về true or false //so sánh hai chuỗi không phân biệt chữ hoa và chữ thường
+sv1.compareTo(sv2)      so sánh >0,<0,=0 //so sánh hai chuỗi sv1 sv2 phân biệt chữ hoa và chữ thường
+sv1.compareToIgnoreCase(sv2)      so sánh >0,<0,=0 //so sánh hai chuỗi sv1 sv2 khong phân biệt chữ hoa và chữ thường
+r1.regionMatches(2, r2, 0, 4) chuỗi1.regionMatches(vị trí bắt đầu 1,chuỗi cần so sánh,vi trí bắt đầu chuỗi 2,độ dài cần so sánh) trả về true or false
+
+r1.startWith("Cần kiểm tra") Hàm kiểm tra chuỗi bắt đầu bằng ....
+r1.endWith("Can kiem tra")   Hàm endWith => Hàm kiểm tra chuỗi kết thúc bằng ...
+s1.concat(s2) nối hai chuỗi s1 va s2 hoặc s1+s2
+s6 = s5.replaceAll("Tung","TITV")     thay thế Tung =TITV
+
+// toLowerCase => chuyển về viết thường
+// toUpperCase => chuyển về viết hoa
+String s7 = s3.toLowerCase();
+String s8 = s3.toUpperCase();
+
+// trim() => xóa khoảng trắng dư thừa ở đầu chuỗi
+s9.trim()
+
+
+/// subString => cắt chuỗi con
+s10.substring(vt bắt đầu,vt kết thúc);
+
+
+// Hàm indexOf()
+Phương thức indexOf() trả về chỉ số của giá trị ký tự đã cho hoặc chuỗi con. Nếu không tìm thấy trả lại giá trị -1. Chỉ số (index) được đếm từ 0
+//Truyền vào chuỗi con
+  int index1 = s1.indexOf("is");
+//Truyền vào chuỗi con và chỉ số bắt đầu
+  int index3 = s1.indexOf("is", 4);
+//Truyền vào giá trị Char
+  int index4 = s1.indexOf('s');
+lastIndexOf() tìm từ sau đến hết
+
+
+
+

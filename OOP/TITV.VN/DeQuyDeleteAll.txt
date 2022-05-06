@@ -1,0 +1,17 @@
+ublic static void xoaFile(File fx) {
+		if(fx.isFile()) {
+			// Xoa neu la tap tin
+			System.out.println("Da xoa: "+fx.getAbsolutePath());
+			fx.delete();
+		}else if (fx.isDirectory()) {
+			// Lay cac file con
+			File[] mangCon = fx.listFiles();
+			for(File f: mangCon) {
+				// Xoa cac file con
+				xoaFile(f);
+			}
+			// Xoa ban than thu muc sau khi da xoa cac file con
+			System.out.println("Da xoa: "+fx.getAbsolutePath());
+			fx.delete();
+		}
+	}

@@ -1,0 +1,103 @@
+import java.io.File;
+
+public class Test_JAVA {
+    public static void main(String[] args) {
+        File file = new File("C:\\Users\\Admin\\Desktop\\TestFile");
+        // Kiem tra la file hay folder
+        if(file.isFile()){
+            System.out.println("File");
+        }
+        else if(file.isDirectory()){
+            System.out.println("Folder");
+        }
+
+        //Kiem tra file ton tai
+        if(file.exists()){
+            System.out.println("File ton tai");
+        }
+        else{
+            System.out.println("File khong ton tai");
+        }
+
+        // //Tao them thu muc
+        // File path = new File("C:\\Users\\Admin\\Desktop\\TestFile\\Test.txt");
+        // path.mkdir();
+
+        //Tao them file test.txt
+        // File path = new File("C:\\Users\\Admin\\Desktop\\TestFile\\Test.txt");
+        // path.createNewFile();
+
+
+        // //Lay ten file
+        // System.out.println("Ten file: "+file.getName());
+        // //Lay phan mo rong File
+        // System.out.println("Phan mo rong: "+file.getExtension());
+
+        //Lay duong dan
+        System.out.println("Duong dan: "+file.getPath());
+
+
+        //Kiem tra co the thuc thi
+        if(file.canExecute()){
+            System.out.println("Co the thuc thi");
+        }
+        else{
+            System.out.println("Khong the thuc thi");
+        }
+
+        //Kiem tra co the doc
+        if(file.canRead()){
+            System.out.println("Co the doc");
+        }
+        else{
+            System.out.println("Khong the doc");
+        }
+
+        //Kiem tra co the ghi
+        if(file.canWrite()){
+            System.out.println("Co the ghi");
+        }
+        else{
+            System.out.println("Khong the ghi");
+        }
+
+        //Tao nhieu thu muc
+        File path = new File("C:\\Users\\Admin\\Desktop\\TestFile\\Test\\Test1\\Test2");
+        path.mkdirs();
+
+        //Xoa thu muc
+        File path1 = new File("C:\\Users\\Admin\\Desktop\\TestFile\\Test\\Test1\\Test2");
+        path1.delete();
+
+
+
+        //Xoa file
+        File path2 = new File("C:\\Users\\Admin\\Desktop\\TestFile\\Test.txt");
+        path2.delete();
+
+        // File List
+        File path3 = new File("C:\\Users\\Admin\\Desktop\\TestFile");
+        File[] files = path3.listFiles();
+        for(File file1 : files){
+            System.out.println(file1.getName());
+        }
+        
+        
+        // in ra so do cay cua thu muc
+        File path4 = new File("C:\\Users\\Admin\\Desktop\\TestFile");
+        System.out.println("So do cay cua thu muc: "+path4.list().length);
+        
+        //Kiem tra thu muc co con hay khong
+        File path5 = new File("C:\\Users\\Admin\\Desktop\\TestFile");
+        if(path5.list().length == 0){
+            System.out.println("Thu muc khong co con");
+        }
+        else{
+            System.out.println("Thu muc co con");
+        }
+
+
+        
+
+    }
+}

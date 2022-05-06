@@ -1,0 +1,33 @@
+Đề bài: Nhập xuất thông tin sinh viên
+Viết chương trình OOP quản lý sinh viên đơn giản: Nhập, xuất thông tin, tính điểm TB.
+Viết lớp Sinh viên như sau:
+
+Attributes (private): các thuộc tính phải đảm bảo tính đóng gói (private).
+
+
+Mã sinh viên là số nguyên.
+Họ tên: chuỗi ký tự.
+Điểm LT, điểm TH : float
+Constructor:
+
+Constructor mặc định (để khởi tạo đối tượng với các thông tin kiểu số là 0, kiểu chuỗi là chuỗi rỗng).
+Constructor thứ hai nhận đầy đủ thông tin để khởi tạo giá trị cho tất cả các biến instance.
+Methods:
+
+Các getter và setter cho mỗi thuộc tính.
+Tính điểm trung bình.
+Phương thức toString để diễn tả đối tượng ở dạng chuỗi.
+Xây dựng class chứa hàm main: tạo 3 đối tượng sinh viên sv1, sv2, sv3, trong đó:
+sv1 chứa thông tin của chính mình (tạo bằng constructor mặc định).
+sv2 là thông tin người bạn thân nhất của em (tạo bằng constructor mặc định).
+sv3 tạo bằng constructor mặc định.
+In bảng danh sách sinh viên gồm 5 cột là MSSV, họ tên, điểm LT, điểm TH, điểm TB (bảng có 3 dòng cho 3 sinh viên).
+Chương trình nhập xuất thông tin sinh viên Java OOP
+Hướng dẫn:
+
+Chúng ta sẽ đi tuần tự các yêu cầu mà đề bài đã đưa ra:
+
+Đầu tiên chúng ta sẽ tạo một class tên là SinhVien để khởi tạo các phương thức
+Trong class này, chúng ta cần khai báo các thuộc tính dưới hình thức đóng gói (private), khởi tạo các constructor có tham số và constructor mặc định, khởi tạo các phương thức getter và setter.
+Tiếp đến sẽ tạo một phương thức để tính điểm trung bình, sau đó tạo phương thức toString để hiển thị kết quả dưới dạng chuỗi.
+Sau khi tạo các phương thức ở class SinhVien, chúng ta sẽ tạo một class Main để thực hiện gọi các phương thức vừa được gọi. Trong class này chúng ta sẽ yêu cầu nhập vào thông tin của 3 sinh viên, lưu dữ liệu được nhập vào và hiển thị nó ra màn hình dưới dạng bảng (sử dụng printf trong C).

@@ -1,0 +1,88 @@
+public class Test_JAVA{
+    public static void main(String[] args){
+        String name_1="Tran Quang Dang";
+        String name_2="Nguyen Van A";
+        // So sanh hai chuoi tra ve True False
+        System.out.println(name_1.equals(name_2));
+        //So sanh 2 chuoi khong phan biet chu hoa chu thuong
+        System.out.println(name_1.equalsIgnoreCase(name_2));
+        //So sanh 2 chuoi tra ve ><=
+        System.out.println(name_1.compareTo(name_2)); 
+        //so sanh 2 chuoi tra ve ><= khong phan biet chu hoa chu thuong
+        System.out.println(name_1.compareToIgnoreCase(name_2));
+
+
+        //Lay phan tu tai 1 vi tri
+        System.out.println(name_1.charAt(0));
+
+        //so sanh mot string tu mot string khac
+        System.out.println(name_1.regionMatches(0,name_2,0,5));
+        //so sanh  khong phan biet chu hoa chu thuong
+        System.out.println(name_1.regionMatches(true,0,name_2,0,5));
+        
+        //lay mot string tu mot string khac
+        System.out.println(name_1.substring(0,5));
+
+
+        //kiem tra sring bat dau
+        System.out.println(name_1.startsWith("Tran"));
+        //kiem tra string ket thuc
+        System.out.println(name_1.endsWith("Dang"));
+        //kiem tra string co chua
+        System.out.println(name_1.contains("Dang"));
+
+        //Tim kiem mot chuoi trong mot chuoi
+        System.out.println(name_1.indexOf("Dang"));
+        //Tim kiem mot chuoi ket thuc trong mot chuoi
+        System.out.println(name_1.lastIndexOf("dang"));
+
+        // so chep string sang mot string khac
+        String name_3=name_1.concat(name_2);
+        System.out.println(name_3);
+
+        // ham thay the trong chuoi
+        String name_4=name_1.replace("Dang","Nguyen");
+        System.out.println(name_4);
+
+        //ham thay the nhieu lan trong chuoi
+        String name_5=name_1.replaceAll("Dang","Nguyen");
+        System.out.println(name_5);
+        
+        
+        
+        //ham thay the dau tien trong chuoi
+        String name_6=name_1.replaceFirst("Dang","Nguyen");  //Dang->Nguyen
+        System.out.println(name_6);
+
+
+        //ham in hoa string
+        String name_7=name_1.toUpperCase();
+        System.out.println(name_7);
+
+        //ham in thuong chuoi string
+        String name_8=name_1.toLowerCase();
+        System.out.println(name_8);
+
+        // Xoa khoang trang du thua o dau chuoi trong String
+        String name_9=name_1.trim();
+        System.out.println(name_9);
+
+
+        // bien doi string sang array
+        String[] name_10=name_1.split(" ");
+        for(String name:name_10){
+            System.out.println(name);
+        }
+
+        //bien doi array sang string
+        String name_11=String.join(" ",name_10);
+        System.out.println(name_11);
+        
+        // //convert string to int
+        // int number=Integer.parseInt(name_1);
+        // System.out.println(number);
+
+
+
+    }
+}

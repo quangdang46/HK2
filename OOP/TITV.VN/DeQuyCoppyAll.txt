@@ -1,0 +1,68 @@
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+
+public class Test_JAVA {
+
+    public static void new_copy(File file1,File File_copy){
+        try {
+            Files.copy(file1.toPath(),File_copy.toPath(),StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(file1.isDirectory()){
+            File[] files = file1.listFiles();
+            for(File file:files){
+                File path = new File(File_copy.getAbsolutePath()+"\\"+file.getName());
+                new_copy(file,path);
+            }
+        }
+    }
+
+
+    public static void main(String[] args) {
+        // File file1=new File("C:\\Users\\Admin\\Desktop\\TestFile\\Test_1.txt");
+        // File file2=new File("C:\\Users\\Admin\\Desktop\\TestFile\\Test_2.txt");
+        // File file3=new File("C:\\Users\\Admin\\Desktop\\TestFile\\Test_3_xyx.txt");
+
+        //Doi ten dung ham renameTo
+        // file1.renameTo(file2);
+        // System.out.println("Done!!");
+        
+        // Doi ten dung ham move trong class files
+        // try {
+        //     Files.move(file2.toPath(),file3.toPath(),StandardCopyOption.REPLACE_EXISTING);
+        // } catch (IOException e) {
+        //     e.printStackTrace();
+        // }
+        
+
+        // //Di chuyen file dung move trong class Files
+        // File new_file = new File("C:\\Users\\Admin\\Desktop\\TestFile\\Test\\Test_1.txt");
+        // try {
+        //     Files.move(file1.toPath(),new_file.toPath(),StandardCopyOption.REPLACE_EXISTING);
+        // } catch (IOException e) {
+        //     e.printStackTrace();
+        // }
+
+
+
+        // //Copy file dung copy trong class Files
+        // //Chi copy PHAN BEN NGOAI KHONG COPY HET FILE
+        File new_file      = new File("C:\\Users\\Admin\\Desktop\\TestFile\\Test");
+        File new_copy_file = new File("C:\\Users\\Admin\\Desktop\\TestFile\\Test_copy");
+        // try {
+        //     Files.copy(new_file.toPath(),new_copy_file.toPath(),StandardCopyOption.REPLACE_EXISTING);
+        // } catch (IOException e) {
+        //     e.printStackTrace();
+        // }
+        // System.out.println("Done!!");
+        
+        //Copy dung ham tu dinh nghia
+        
+        Test_JAVA.new_copy(new_file,new_copy_file);
+        System.out.println("Done!!");
+
+    }
+}
